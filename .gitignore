@@ -1,0 +1,13 @@
+# WordPress 站点内容（数据、插件、主题、上传文件）
+wp-content/database/
+wp-content/uploads/
+wp-content/plugins/
+wp-content/themes/
+wp-content/upgrade/
+wp-content/db.php
+
+# 临时与缓存
+*.log
+.DS_Store
+node_modules/
+screenshots/
