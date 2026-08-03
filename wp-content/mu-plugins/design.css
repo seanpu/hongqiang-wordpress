@@ -105,19 +105,21 @@ body.home {
 .home .site-branding.ast-site-identity .site-title a {
 	color: #ffffff !important;
 }
-.home .main-header-menu > .menu-item > a,
-.home .main-navigation .main-header-menu > .menu-item > a {
-	color: rgba(255,255,255,0.85) !important;
-}
-.home .main-header-menu > .menu-item > a:hover {
-	color: #ffffff !important;
-}
-.home .main-header-menu .current-menu-item > a,
-.home .main-navigation .main-header-menu .current-menu-item > a {
-	color: #ffc861 !important;
-}
-.home .main-header-menu .menu-item-has-children > .sub-menu {
-	background: #071d40;
+@media (min-width: 922px) {
+	.home .main-header-menu > .menu-item > a,
+	.home .main-navigation .main-header-menu > .menu-item > a {
+		color: rgba(255,255,255,0.85) !important;
+	}
+	.home .main-header-menu > .menu-item > a:hover {
+		color: #ffffff !important;
+	}
+	.home .main-header-menu .current-menu-item > a,
+	.home .main-navigation .main-header-menu .current-menu-item > a {
+		color: #ffc861 !important;
+	}
+	.home .main-header-menu .menu-item-has-children > .sub-menu {
+		background: #071d40;
+	}
 }
 
 /* ---------- 首页 Hero ---------- */
@@ -845,16 +847,15 @@ body:not(.home) .entry-content .wp-block-table tbody td:first-child {
 		width: 100%;
 		text-align: left;
 	}
-	/* 修复移动端菜单容器定位 */
-	.ast-header-break-point .ast-mobile-header-content {
-		position: relative !important;
-		display: block;
+	/* 移动端菜单容器：保持 Astra 默认收起/展开逻辑，不强制 display */
+	/* 移动端菜单项文字颜色：白底上深色（覆盖首页透明导航的白色文字，最高特异性） */
+	body.home .ast-header-break-point .ast-mobile-header-content .menu-item > a,
+	body.home .ast-header-break-point .ast-mobile-header-content .menu-item > .menu-link {
+		color: #1e293b !important;
+		font-weight: 500;
 	}
-	/* 移动端菜单项文字颜色（深色背景上白色） */
-	.ast-header-break-point .ast-mobile-header-content .menu-item > a {
-		color: #1e293b;
-	}
-	.ast-header-break-point .ast-mobile-header-content .current-menu-item > a {
-		color: #046bd2;
+	body.home .ast-header-break-point .ast-mobile-header-content .current-menu-item > a,
+	body.home .ast-header-break-point .ast-mobile-header-content .current-menu-item > .menu-link {
+		color: #046bd2 !important;
 	}
 }
