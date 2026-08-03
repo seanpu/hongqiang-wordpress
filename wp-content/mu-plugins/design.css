@@ -698,3 +698,126 @@ body:not(.home) .entry-content .wp-block-table tbody td:first-child {
 .has-text-align-right {
 	text-align: right !important;
 }
+
+/* ---------- Hero 标题基础样式（hq-hero-title / hq-gold-text） ---------- */
+.home .hq-hero-title {
+	font-size: 52px;
+	font-weight: 800;
+	line-height: 1.25;
+	margin-bottom: 14px;
+	letter-spacing: 4px;
+	text-shadow: 0 2px 24px rgba(7, 29, 64, 0.6);
+}
+.home .hq-hero-title .hq-gold-text {
+	color: #ffc861;
+}
+
+/* ---------- 移动端适配 ---------- */
+@media (max-width: 768px) {
+	/* Hero：缩小标题与内边距 */
+	.home .hq-hero-title {
+		font-size: 30px;
+		letter-spacing: 1px;
+		line-height: 1.3;
+	}
+	.home .wp-block-cover {
+		padding-top: 90px !important;
+		padding-bottom: 50px !important;
+		min-height: 460px !important;
+	}
+	/* Hero 按钮：不换行、自适应宽度、纵向排列 */
+	.home .wp-block-cover .wp-block-button__link {
+		white-space: nowrap;
+		padding: 13px 26px;
+		font-size: 15px;
+		margin: 6px 0;
+		display: inline-block;
+	}
+	/* hero eyebrow 小字 */
+	.home .wp-block-cover__inner-container p:first-child {
+		font-size: 12px !important;
+		letter-spacing: 3px !important;
+	}
+	/* hero 服务列表行 */
+	.home .wp-block-cover .wp-block-cover__inner-container p:nth-of-type(3) {
+		font-size: 14px !important;
+		line-height: 1.6;
+	}
+
+	/* 区块标题：缩小 */
+	.entry-content h2.wp-block-heading.has-text-align-center {
+		font-size: 24px;
+	}
+	.entry-content h2.wp-block-heading.has-text-align-center::before {
+		font-size: 24px;
+		margin-right: 8px;
+	}
+
+	/* 产品卡片：单列、缩小内边距 */
+	.entry-content .wp-block-columns .wp-block-column {
+		padding: 24px 20px;
+		margin-bottom: 16px;
+	}
+	.entry-content .wp-block-columns .wp-block-column h3 {
+		font-size: 19px;
+	}
+
+	/* 优势区图标卡片 */
+	.hq-adv-icon {
+		width: 42px;
+		height: 42px;
+	}
+	.entry-content .wp-block-group.has-background .wp-block-column {
+		padding: 16px 8px !important;
+	}
+
+	/* 服务流程步骤卡片 */
+	.hq-flow-cols .hq-step {
+		padding: 20px 12px !important;
+	}
+	.hq-step-num {
+		font-size: 32px !important;
+	}
+
+	/* 区块纵向间距缩小 */
+	.entry-content .wp-block-group,
+	.entry-content > h2.wp-block-heading {
+		padding-top: 32px !important;
+		padding-bottom: 32px !important;
+	}
+	.entry-content .wp-block-group[style*="padding-top:40px"],
+	.entry-content .wp-block-group[style*="padding-top:48px"],
+	.entry-content .wp-block-group[style*="padding-top:56px"] {
+		padding-top: 32px !important;
+		padding-bottom: 32px !important;
+	}
+
+	/* 联系表单布局：单列 */
+	.entry-content .wp-block-columns {
+		flex-direction: column;
+	}
+	.entry-content .wp-block-columns .wp-block-column {
+		width: 100%;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	.wpforms-container .wpforms-field {
+		padding: 4px 0;
+	}
+
+	/* 内页标题栏 */
+	body:not(.home) .ast-article-single .entry-header,
+	.hq-archive-banner {
+		padding: 30px 20px !important;
+	}
+	body:not(.home) .ast-article-single .entry-header h1,
+	.hq-archive-banner h1 {
+		font-size: 24px;
+	}
+
+	/* 页脚 */
+	.hq-footer-icp {
+		padding: 20px 12px !important;
+		font-size: 12px !important;
+	}
+}
