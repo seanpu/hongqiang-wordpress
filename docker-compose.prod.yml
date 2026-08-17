@@ -18,3 +18,4 @@ services:
       - ./wp-content:/var/www/html/wp-content
       - ./apache/performance.conf:/etc/apache2/conf-enabled/performance.conf:ro
       - ./apache/security.conf:/etc/apache2/conf-enabled/security.conf:ro
+      - ./apache/mpm.conf:/etc/apache2/conf-enabled/mpm.conf:ro
